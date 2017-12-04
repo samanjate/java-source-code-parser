@@ -13,7 +13,7 @@ public class MyListener extends Java8BaseListener {
 	}
 	
 	@Override 
-	public void enterMethodName(Java8Parser.MethodNameContext ctx) {
-		methodNames.add(ctx.getText());
+	public void enterMethodDeclarator(Java8Parser.MethodDeclaratorContext ctx) {
+		methodNames.add(ctx.getChild(0).getText());
 	}
 }
